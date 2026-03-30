@@ -11,7 +11,11 @@ Answer all 4 questions with detailed explanations. Each answer should be **3-5 s
 
 **Your Answer:**
 
-[Write your answer here. Consider: What is a process? What is a thread? How do they differ in terms of memory, resources, creation overhead? Why are threads more suitable for this simulation?]
+[process is a full program with its own memory, while a thread is a smaller part inside the process.
+Threads share memory and are faster to create than processes.
+Processes use more system resources compared to threads.
+In this assignment, we used threads because they are lightweight and faster.
+They are better for simulation and switching between tasks easy]
 
 ---
 
@@ -21,15 +25,22 @@ Answer all 4 questions with detailed explanations. Each answer should be **3-5 s
 
 **Your Answer:**
 
-[Write your answer here. Describe the specific behavior - where does the process go? When does it run again? Give an example from your actual program output showing a process that was re-queued.]
+[it goes back to the end of the ready queue.
+Then other processes get their turn before it runs again.
+This makes the system fair for all processes.
+The process keeps repeating this until it finishes]
 
 Example from my output:
 ```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
+[P1 executing quantum [4000ms]
+P1 completed quantum 4000ms │ Remaining time: 4284ms
+ P1 yields CPU for context switch
+P1 added to ready queue]
 ```
 
 **Explanation of example:**
-[Explain what's happening in the output snippet you pasted]
+[P1 did not finish so it was stopped and added back to the queue.
+Then it waits for its next turn to run again.]
 
 ---
 
@@ -41,15 +52,15 @@ Example from my output:
 
 [Write your answer here. For each state, explain when P1 enters that state during the simulation. Use your understanding of the code to trace through the lifecycle.]
 
-1. **New**: [When is P1 in New state?]
+1. **New**: [p1 is in the New state when the thread is created and added to the ready queue before execution P1 added to ready queue]
 
-2. **Runnable**: [When does P1 become Runnable?]
+2. **Runnable**: [p1 becomes Runnable after calling start(), where it is ready to run and waits in the ready queue for its turn [P2 → P3  → P1]]
 
-3. **Running**: [When is P1 Running?]
+3. **Running**: [P1 is in the Running state when it starts executing its time quantum p1 executing quantum [4000ms]]
 
-4. **Waiting**: [When/why would P1 be Waiting?]
+4. **Waiting**: [P1 enters the Waiting state during execution when Thread.sleep() is used to simulate processing time, which is shown by the progress update]
 
-5. **Terminated**: [When is P1 Terminated?]
+5. **Terminated**: [P1 becomes Terminated after finishing execution completely when remaining time is 0 P1 finished execution! ]
 
 ---
 
@@ -59,31 +70,31 @@ Example from my output:
 
 **Your Answer:**
 
-### Example 1: [Name of application/scenario]
+### Example 1: [Web Browser]
 
 **Description**: 
-[Describe the real-world scenario or application]
+[Browsers run multiple tabs at the same time]
 
 **Why Round-Robin works well here**: 
-[Explain why Round-Robin scheduling is suitable. Consider fairness, responsiveness, predictability, etc.]
+[It gives each tab a small CPU time so all tabs stay responsive]
 
-### Example 2: [Name of application/scenario]
+### Example 2: [Operating System]
 
 **Description**: 
-[Describe the real-world scenario or application]
+[The OS runs many programs at the same time]
 
 **Why Round-Robin works well here**: 
-[Explain why Round-Robin scheduling is suitable. Consider fairness, responsiveness, predictability, etc.]
+[shares CPU time fairly between programs and prevents freezing]
 
 ---
 
 ## Summary
 
 **Key concepts I understood through these questions:**
-1. 
-2. 
-3. 
+1. difference between thread and process
+2. Round-Robin scheduling
+3. Thread states
 
 **Concepts I need to study more:**
-1. 
-2. 
+1. Synchronization
+2. Deadlocks

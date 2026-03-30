@@ -9,7 +9,10 @@ Answer the following questions about your learning experience. Each answer shoul
 
 **Your Answer:**
 
-[Write your answer here. Discuss specific concepts like thread creation, thread states, how threads execute concurrently, what surprised you, etc.]
+[I learned the basics of multithreading in Java.  
+I understood how to create threads using the Runnable interface.  
+I also learned that threads can run tasks concurrently but can be controlled using scheduling.  
+The join() method helped me understand how to control execution order]
 
 ---
 
@@ -17,7 +20,11 @@ Answer the following questions about your learning experience. Each answer shoul
 
 **Your Answer:**
 
-[Describe the specific challenge. Was it understanding the code? Implementing a feature? Using Git? Explain what made it difficult and how it relates to the course concepts.]
+[The most challenging part was implementing the waiting time feature.  
+I found it difficult to understand how to calculate time correctly.  
+I was confused about where to place the code inside the program.  
+I also faced some errors while testing the program.  
+This challenge was related to understanding how processes wait in the queue]
 
 ---
 
@@ -25,7 +32,10 @@ Answer the following questions about your learning experience. Each answer shoul
 
 **Your Answer:**
 
-[Describe your problem-solving approach. Did you read documentation? Ask for help? Debug systematically? What resources did you use? What strategies worked?]
+[I solved the problems by working step by step.  
+I reviewed the concepts from the lecture and tried to understand them better.  
+I fixed errors by using some help from the AI to understand and testing the code carefully.  
+This helped me complete the feature successfully. ]
 
 ---
 
@@ -33,7 +43,10 @@ Answer the following questions about your learning experience. Each answer shoul
 
 **Your Answer:**
 
-[Give specific examples from real applications you use (web browsers, games, mobile apps, etc.). Explain why threads are useful in those scenarios. Connect to what you learned in this assignment.]
+[applications in the real world make advantage of multithreading.  
+Web browsers, for instance, use threads to open several tabs simultaneously without experiencing any lag.  
+Threads are used by mobile applications to do background operations while maintaining a responsive user interface.  
+This assignment taught me how scheduling, which is comparable to how actual systems operate, allows programs to share the CPU.]
 
 ---
 
